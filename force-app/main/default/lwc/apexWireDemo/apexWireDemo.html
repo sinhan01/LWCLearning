@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Apex Wire Demo">
+        <div class="slds-var-p-around_medium">
+            <template if:true={accountlist}>
+                <template for:each={accountlist} for:item="account">
+                    <div key={account.Id} class="slds-box slds-box_xx-small">
+                        <p><strong>Name: </strong>{account.Name}</p>
+                        <p><strong>Type: </strong>{account.Type}</p>
+                        <p><strong>Industry: </strong>{account.Industry}</p>
+                    </div>
+              </template>
+            </template>            
+        </div>
+    </lightning-card>
+    <lightning-card title="Apex Wire Demo with data manipulation">
+        <div class="slds-var-p-around_medium">
+            <template if:true={accountHandlerList}>
+                <template for:each={accountHandlerList} for:item="accountList">
+                    <div key={accountList.Id} class="slds-box slds-box_xx-small">
+                        <p><strong>Name: </strong>{accountList.Name}</p>
+                        <p><strong>Type: </strong>{accountList.newType}</p>
+                        <p><strong>Industry: </strong>{accountList.Industry}</p>
+                    </div>
+              </template>
+            </template>            
+        </div>
+    </lightning-card>    
+</template>

@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Wire Get All Picklist Value By Record Type Demo">
+        <div class="slds-var-p-around_medium">
+            <template if:true={ratingOption}>
+                <div>
+                    <lightning-combobox
+                    name="Rating"
+                    label="Rating"
+                    value={selectedRating}
+                    placeholder="Select Rating"
+                    options={ratingOption}
+                    onchange={handleChange} ></lightning-combobox>
+                </div>
+            </template>
+        </div>
+        <div class="slds-var-p-around_medium">
+            <template if:true={industryOptions}>
+                <div>
+                    <lightning-combobox
+                    name="Industry"
+                    label="Industry"
+                    value={selectedIndustry}
+                    placeholder="Select Industry"
+                    options={industryOptions}
+                    onchange={handleChange} ></lightning-combobox>
+                </div>
+        </template>
+        </div>        
+    </lightning-card>
+</template>
